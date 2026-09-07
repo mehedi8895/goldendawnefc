@@ -1,0 +1,1 @@
+(async()=>{let p=await GDFC.approved();if(!p)return;content.innerHTML='<div class="panel"><p>This area is protected by Supabase Auth and RLS.</p><button class="btn gold" id="logout">Logout</button></div>';logout.onclick=async()=>{await sb.auth.signOut();location.href='index.html'}})()

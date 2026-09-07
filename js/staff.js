@@ -1,0 +1,1 @@
+(async()=>{let p=await GDFC.approved();if(!p||p.role!=='owner'){content.innerHTML='<p>Owner access required.</p>';return}content.innerHTML='<div class="panel"><p>Owner-only staff management is backed by the secure Edge Function.</p></div>'})()

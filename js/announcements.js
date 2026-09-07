@@ -1,0 +1,1 @@
+(async()=>{let r=await sb.from('announcements').select('*').eq('published',true).order('created_at',{ascending:false});content.innerHTML=(r.data||[]).map(n=>`<article class="item"><div><b>${GDFC.esc(n.title)}</b><p>${GDFC.esc(n.content)}</p></div><span>${GDFC.time(n.created_at)}</span></article>`).join('')||'<p>No announcements.</p>'})()

@@ -1,0 +1,1 @@
+(async()=>{let r=await sb.from('tournaments').select('*').eq('status','completed').order('tournament_date',{ascending:false});content.innerHTML=(r.data||[]).map(t=>`<div class="item"><b>${GDFC.esc(t.name)}</b><span>Champion: ${GDFC.esc(t.winner_id||'—')} • Runner-up: ${GDFC.esc(t.runner_up_id||'—')}</span></div>`).join('')||'<p>No completed tournaments.</p>'})()

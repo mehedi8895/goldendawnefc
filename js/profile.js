@@ -1,0 +1,1 @@
+(async()=>{let p=await GDFC.approved();if(!p)return;content.innerHTML=`<div class="panel"><p><b>${GDFC.esc(p.full_name)}</b></p><p>@${GDFC.esc(p.username)}</p><p>eFootball ID: ${GDFC.esc(p.efootball_id)}</p><p>Status: ${p.status}</p></div>`})()

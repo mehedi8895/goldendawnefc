@@ -1,0 +1,1 @@
+(async()=>{let r=await sb.from('profiles').select('full_name,username,efootball_id,joined_at').eq('status','approved').order('full_name');content.innerHTML=(r.data||[]).map(p=>`<div class="item"><b>${GDFC.esc(p.full_name)}</b><span>@${GDFC.esc(p.username)} • ${GDFC.esc(p.efootball_id)}</span></div>`).join('')})()

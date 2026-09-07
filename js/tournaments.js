@@ -1,0 +1,1 @@
+(async()=>{let r=await sb.from('tournaments').select('*').order('created_at',{ascending:false});content.innerHTML=(r.data||[]).map(t=>`<a class="item" href="tournament.html?id=${t.id}"><b>${GDFC.esc(t.name)}</b><span>${t.capacity} • ${t.status}</span></a>`).join('')||'<p>No tournaments yet.</p>'})();

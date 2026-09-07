@@ -1,0 +1,1 @@
+(async()=>{let r=await sb.from('matches').select('*').eq('status','completed').order('updated_at',{ascending:false});content.innerHTML=(r.data||[]).map(m=>`<div class="item"><b>${GDFC.esc(m.player1_country||'TBD')} ${m.score1??0} — ${m.score2??0} ${GDFC.esc(m.player2_country||'TBD')}</b><span>${GDFC.esc(m.round)}</span></div>`).join('')||'<p>No results.</p>'})()

@@ -1,0 +1,1 @@
+(async()=>{let r=await sb.from('matches').select('*').order('scheduled_at',{ascending:true});content.innerHTML=(r.data||[]).map(m=>`<div class="item"><b>${GDFC.esc(m.player1_country||'TBD')} vs ${GDFC.esc(m.player2_country||'TBD')}</b><span>${GDFC.esc(m.status)}</span></div>`).join('')||'<p>No matches.</p>'})()
